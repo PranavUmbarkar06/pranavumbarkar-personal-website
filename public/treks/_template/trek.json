@@ -1,0 +1,11 @@
+{
+  "name": "Trek name",
+  "when": "2026-01",
+  "where": "Place, State",
+  "highlight": "One punchy line (shown big and yellow)",
+  "description": "A short description, two or three sentences.",
+  "bestMemory": "Your best memory from this trek.",
+  "altitude_m": 3000,
+  "distance_km": 12,
+  "days": 2
+}
