@@ -1,0 +1,16 @@
+{
+  "name": "Mnemoniser",
+  "when": "2026-11",
+  
+  "where": "my hostel room",
+  "status": "completed",
+  "role": "everything",
+  "highlight": "learned about transformer architecture",
+  "brief": "generates a catchy mnemonic for any initial you give",
+  "story": "realised i use too many mnemonic to remember",
+  "learned": "installing pytorch is a task in itself",
+  "tech": ["Python", "pytorch", "next.js", "twitter"],
+  "collaborators": [],
+  "github": "https://github.com/",
+  "demo": ""  
+}

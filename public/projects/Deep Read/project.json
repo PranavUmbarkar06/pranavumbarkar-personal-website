@@ -1,0 +1,17 @@
+{
+  "name": "Deep Read",
+  "when": "2026-07",
+  
+  "where": "ServiceNow AI.Accelerate Bootcamp Hyderabad",
+  "status": "Presented",
+  "role": "Everything",
+  "highlight": "First ever presentation in a corporate setting",
+  "brief": "A simple tool to simplify research. fetches, validates, compares, summarises papers for you",
+  "story": "Proff shared a lot of papers and i had to analyse them fast.",
+  "learned": "Ship the ugly version first. Nobody saw my 'perfect' versions anyway.",
+  "tech": ["HTML", "CSS", "JavaScript","arXiv","LangGraph"],
+  "collaborators": [],
+  "github": "https://github.com/PranavUmbarkar06/deep-read",
+  "demo": "",
+  "metric": { "label": "distance travelled", "value": "300km" }
+}

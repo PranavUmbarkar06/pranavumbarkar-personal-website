@@ -1,0 +1,15 @@
+{
+  "name": "First open mic",
+  "when": "2021-08-14",
+  "venue": "The Corner Room café, Pune",
+  "where": "Corner Room",
+  "instruments": ["Acoustic guitar", "Vocals"],
+  "members": [],
+  "setlist": ["Monsoon Window (original)", "Two Chords and a Promise", "Slow Train Home"],
+  "highlight": "Hands shaking. Played anyway.",
+  "brief": "Three songs, one borrowed capo and about 25 people pretending not to notice my knees.",
+  "story": "Signed up on a dare and spent the week practising in the stairwell. Forgot the second verse of the opener, hummed it, and somebody at the back hummed along. That was the moment I got hooked.",
+  "feeling": "Nobody remembers the wrong chord. They remember that you kept going.",
+  "crowd": "25",
+  "clips": [{ "file": "stairwell-practice.wav", "title": "Stairwell practice take (placeholder audio)" }]
+}

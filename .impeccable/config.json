@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "arial",
+        "createdAt": "2026-11-23T00:29:37.965Z",
+        "reason": "Claude: Arial is deliberate in the Music world's early-90s desktop-window cards (.win, .theme-hall), matching the period OS look"
+      }
+    ]
+  }
+}

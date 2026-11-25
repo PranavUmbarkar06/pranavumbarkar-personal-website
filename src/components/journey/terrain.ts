@@ -25,7 +25,8 @@ export function rng(seed: number) {
 
 export const round1 = r1;
 
-export function buildRoad(milestones: Milestone[]) {
+/** bump: how bumpy the road is between signs (1 = mountain trail, ~0.3 = city street) */
+export function buildRoad(milestones: Milestone[], { bump = 1 }: { bump?: number } = {}) {
   const xs = milestones.map((_, i) => START_X + i * SPACING);
   const end = xs[xs.length - 1] + 900;
 
@@ -61,7 +62,7 @@ export function buildRoad(milestones: Milestone[]) {
   }
 
   function noise(x: number) {
-    return 16 * Math.sin(x / 170) + 8 * Math.sin(x / 71 + 1.3) + 3.5 * Math.sin(x / 29 + 0.4);
+    return bump * 16 * Math.sin(x / 170) + bump * (8 * Math.sin(x / 71 + 1.3) + 3.5 * Math.sin(x / 29 + 0.4));
   }
 
   /** ground y at road x */
@@ -116,4 +117,17 @@ export function farRange(w: number, seed: number, base: number, amp: number) {
   }
   peaks.push(`L${w + 200} ${SCENE_H + 200} Z`);
   return { range: peaks.join(" "), caps: caps.join(" ") };
+}
+
+/** City skyline for a parallax layer: buildings standing on `base`, `w` units wide. */
+export function skyline(w: number, seed: number, minH: number, maxH: number, minW = 40, maxW = 90) {
+  const r = rng(seed);
+  const out: { x: number; w: number; h: number; kind: number; c: number }[] = [];
+  let x = -60;
+  while (x < w + 200) {
+    const bw = minW + r() * (maxW - minW);
+    out.push({ x: r1(x), w: r1(bw), h: r1(minH + Math.pow(r(), 1.6) * (maxH - minH)), kind: Math.floor(r() * 4), c: Math.floor(r() * 3) });
+    x += bw - 4 + r() * 14;
+  }
+  return out;
 }

@@ -131,9 +131,46 @@ function Decor({ scene }: { scene: SceneKind }) {
           <rect x={229} y={58} width={14} height={10} fill="#666" stroke={INK} strokeWidth={2} />
         </g>
       );
+    case "neon": {
+      // sunset sun, skyline with neon trims, palms
+      const towers: [number, number, number, string][] = [[6, 78, 30, "#ff3d9a"], [40, 52, 26, "#2de2e6"], [70, 92, 34, "#ff9a3c"], [206, 66, 30, "#2de2e6"], [240, 40, 26, "#ff3d9a"], [270, 84, 44, "#ffd23f"]];
+      return (
+        <g>
+          <circle cx={160} cy={112} r={52} fill="#ffcf6b" />
+          <path d="M108 112 A52 52 0 0 0 212 112 Z" fill="#ff3d9a" opacity={0.55} />
+          {[0, 1, 2, 3].map((i) => <rect key={i} x={100} y={104 + i * 11} width={120} height={2.5 + i * 1.5} fill="#ff8a6b" />)}
+          {towers.map(([x, y, w, neon], i) => (
+            <g key={i}>
+              <rect x={x} y={y} width={w} height={160 - y} fill={i % 2 ? "#3d1866" : "#2b1a5a"} stroke={INK} strokeWidth={2.5} />
+              <rect x={x + 2} y={y + 4} width={w - 4} height={3} fill={neon} />
+              {Array.from({ length: Math.floor((140 - y) / 14) }, (_, r) => (
+                <rect key={r} x={x + 6} y={y + 14 + r * 14} width={w - 12} height={4} fill="#ffe08a" opacity={0.5 + ((r + i) % 2) * 0.3} />
+              ))}
+            </g>
+          ))}
+          {[[124, 1], [196, -1]].map(([x, l], i) => (
+            <g key={i} transform={`translate(${x} 150)`} strokeLinejoin="round" strokeLinecap="round">
+              <path d={`M0 0 Q${5 * l} -36 ${14 * l} -70`} fill="none" stroke={INK} strokeWidth={7} />
+              <path d={`M0 0 Q${5 * l} -36 ${14 * l} -70`} fill="none" stroke="#8a5a34" strokeWidth={3.5} />
+              <g transform={`translate(${14 * l} -70)`}>
+                {[-160, -125, -90, -55, -20, 10].map((a) => (
+                  <path key={a} d="M0 0 Q18 -15 42 -4 Q22 -8 0 0Z" transform={`rotate(${a})`} fill="#1f9a62" stroke={INK} strokeWidth={2} />
+                ))}
+              </g>
+            </g>
+          ))}
+        </g>
+      );
+    }
     case "music":
       return (
         <g>
+          {/* concert-hall dome and a staff behind the notes */}
+          <g fill="none" stroke="#eef3ff">
+            <path d="M10 156 A140 118 0 0 1 290 156" strokeWidth={2} opacity={0.35} />
+            <path d="M44 156 A106 88 0 0 1 256 156" strokeWidth={1.2} opacity={0.22} />
+            {[30, 38, 46, 54, 62].map((y) => <path key={y} d={`M30 ${y} H270`} strokeWidth={1.2} opacity={0.45} />)}
+          </g>
           <g fill="#fff" stroke={INK} strokeWidth={2.5}>
             <g transform="translate(60 60)">
               <ellipse rx={9} ry={7} transform="rotate(-20)" />
@@ -214,7 +251,7 @@ export function Scene({ world, vehicle }: { world: World; vehicle: Vehicle }) {
       </g>
       <Decor scene={world.scene} />
       <path d="M0 150 Q60 120 120 140 T240 130 T320 135 V200 H0Z" fill={shade(world.hill, 0.25)} stroke={INK} strokeWidth={2.5} />
-      <path d={`${road} V200 H0Z`} fill="#8a5a2b" stroke={INK} strokeWidth={3} />
+      <path d={`${road} V200 H0Z`} fill={world.scene === "neon" ? "#2a2140" : "#8a5a2b"} stroke={INK} strokeWidth={3} />
       <path d={`${road} V178 C260 166 210 184 160 182 S70 168 0 182Z`} fill={world.hill} />
       <path d={road} fill="none" stroke={INK} strokeWidth={3} />
       <path d="M20 172 l4 -8 l4 8z M100 168 l3 -7 l3 7z M250 162 l4 -8 l4 8z M290 164 l3 -6 l3 6z" fill={shade(world.hill, -0.25)} />

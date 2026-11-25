@@ -1,6 +1,5 @@
 {
-  "_readme": "Everything on /recruiters comes from this file. Add or remove items in any list and the page updates. Leave a field as \"\" (or a list as []) to hide it. Format is documented in README.md.",
-
+  "_readme": "Everything on /recruiters comes from this file. Lists show in the order written, so put your best first: the home page shows the first 3 projects and first 5 achievements, and 'see all' pages show the rest. Leave a field as \"\" (or a list as []) to hide it. Format is documented in README.md.",
   "profile": {
     "name": "Pranav Umbarkar",
     "headline": "B.Tech CSE (AI & DS) · NIT Warangal",
@@ -9,27 +8,35 @@
     "photo": "",
     "summary": "Computer science student at NIT Warangal specialising in AI and data science. I like building systems end to end: LLM agents with LangGraph, routing engines over national road graphs, and data pipelines that turn messy web data into real signals. Winner of IEEEXtreme 2026 and 500+ problems solved on LeetCode."
   },
-
   "contact": {
     "email": "umbarkar01@gmail.com",
     "phone": "",
     "resume": "/cv.pdf"
   },
-
   "links": {
     "github": "",
     "linkedin": "",
     "leetcode": "",
     "other": []
   },
-
   "stats": [
-    { "value": "9.10", "label": "CGPA at NIT Warangal" },
-    { "value": "1st", "label": "IEEEXtreme 2026" },
-    { "value": "500+", "label": "LeetCode problems" },
-    { "value": "2", "label": "Industry programmes" }
+    {
+      "value": "9.10",
+      "label": "CGPA at NIT Warangal"
+    },
+    {
+      "value": "1st",
+      "label": "IEEEXtreme 2026"
+    },
+    {
+      "value": "500+",
+      "label": "LeetCode problems"
+    },
+    {
+      "value": "2",
+      "label": "Industry programmes"
+    }
   ],
-
   "internships": [
     {
       "role": "Participant",
@@ -41,7 +48,10 @@
         "Built an LLM-based PTO agent as a capstone project that processes employee leave requests and checks them against company leave policy.",
         "Designed the agent's modular workflow and system architecture, separating request intake, policy evaluation, and decision logic for integration with enterprise systems."
       ],
-      "tech": ["LLM agents", "Workflow design"],
+      "tech": [
+        "LLM agents",
+        "Workflow design"
+      ],
       "link": ""
     },
     {
@@ -54,17 +64,28 @@
         "Built a brand-protection data pipeline over 10,000+ ICANN domains, extracting features from SSL metadata, domain registration age, and scraped page content.",
         "Developed a custom Logistic Regression and FuzzyWuzzy risk-scoring model on unstructured data, identifying 371 highly suspicious impersonating domains for threat analysis."
       ],
-      "tech": ["Python", "Scikit-learn", "FuzzyWuzzy", "Web scraping"],
+      "tech": [
+        "Python",
+        "Scikit-learn",
+        "FuzzyWuzzy",
+        "Web scraping"
+      ],
       "link": ""
     }
   ],
-
   "projects": [
     {
       "name": "Saarathi",
       "tagline": "Crop-aware routing platform for perishables",
       "when": "October 2026",
-      "tech": ["Python", "FastAPI", "SciPy", "React", "MapLibre"],
+      "description": "An India-wide routing platform for trucks carrying perishable crops. It picks routes by what spoilage would cost in rupees for that crop, not just by distance, and tells dispatchers when they must decide before a load goes bad.",
+      "tech": [
+        "Python",
+        "FastAPI",
+        "SciPy",
+        "React",
+        "MapLibre"
+      ],
       "points": [
         "Built an India-wide routing engine on a 591K-edge OpenStreetMap road graph (581,000 km), using corridor-pruned Dijkstra over crop-specific rupee costs to return routes in 0.4–2 s on most corridors.",
         "Modelled spoilage from heat, humidity, vibration, and handling for 3 crops; cut projected wastage from 4.96% to 3.77% (24%) across 170 simulated shipments on real Agmarknet corridors.",
@@ -77,7 +98,15 @@
       "name": "Autonomous AI Research Agent",
       "tagline": "Dual-agent LangGraph pipeline over arXiv",
       "when": "June 2026",
-      "tech": ["LangGraph", "Gemini API", "ChromaDB", "FastAPI", "Pydantic", "PyPDF"],
+      "description": "A two-agent system that reads arXiv papers, finds which ones are fair baselines to compare against, and checks research hypotheses against the full papers with a critic loop and a RAG validator.",
+      "tech": [
+        "LangGraph",
+        "Gemini API",
+        "ChromaDB",
+        "FastAPI",
+        "Pydantic",
+        "PyPDF"
+      ],
       "points": [
         "Designed a dual-agent LangGraph pipeline that fetches arXiv papers, parses structured content with PyPDF, and runs parallel compatibility checks to filter valid comparative baselines.",
         "Added a critic feedback loop for iterative refinement and a RAG-based validator (ChromaDB) that checks research hypotheses and answers questions against full paper corpora."
@@ -86,19 +115,79 @@
       "live": ""
     }
   ],
-
   "liveProjects": [],
-
   "skills": [
-    { "group": "Languages", "items": ["C++", "Python", "SQL", "JavaScript", "R"] },
-    { "group": "AI/ML & GenAI", "items": ["PyTorch", "Scikit-learn", "Pandas", "NumPy", "LangGraph", "Gemini API", "RAG", "ChromaDB"] },
-    { "group": "Web & Backend", "items": ["Flask", "FastAPI", "HTML", "CSS", "JavaScript"] },
-    { "group": "Software Engineering", "items": ["Git", "GitHub", "REST APIs", "Socket Programming"] },
-    { "group": "Core CS", "items": ["Data Structures & Algorithms", "OOP", "Operating Systems", "DBMS", "Computer Networks", "Computer Architecture"] },
-    { "group": "Mathematics", "items": ["Linear Algebra", "Probability & Statistics", "Optimization Techniques"] },
-    { "group": "Areas of interest", "items": ["Software Engineering", "Systems Programming", "Computer Networks", "Cybersecurity"] }
+    {
+      "group": "Languages",
+      "items": [
+        "C++",
+        "Python",
+        "SQL",
+        "JavaScript",
+        "R"
+      ]
+    },
+    {
+      "group": "AI/ML & GenAI",
+      "items": [
+        "PyTorch",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "LangGraph",
+        "Gemini API",
+        "RAG",
+        "ChromaDB"
+      ]
+    },
+    {
+      "group": "Web & Backend",
+      "items": [
+        "Flask",
+        "FastAPI",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "group": "Software Engineering",
+      "items": [
+        "Git",
+        "GitHub",
+        "REST APIs",
+        "Socket Programming"
+      ]
+    },
+    {
+      "group": "Core CS",
+      "items": [
+        "Data Structures & Algorithms",
+        "OOP",
+        "Operating Systems",
+        "DBMS",
+        "Computer Networks",
+        "Computer Architecture"
+      ]
+    },
+    {
+      "group": "Mathematics",
+      "items": [
+        "Linear Algebra",
+        "Probability & Statistics",
+        "Optimization Techniques"
+      ]
+    },
+    {
+      "group": "Areas of interest",
+      "items": [
+        "Software Engineering",
+        "Systems Programming",
+        "Computer Networks",
+        "Cybersecurity"
+      ]
+    }
   ],
-
   "positions": [
     {
       "title": "Executive",
@@ -111,15 +200,43 @@
       ]
     }
   ],
-
   "achievements": [
-    { "title": "Winner, IEEEXtreme Hackathon", "detail": "1st place", "when": "2026" },
-    { "title": "Runner-Up, Abhyaas Edu Ltd Case Competition", "detail": "", "when": "Jan 2026" },
-    { "title": "2nd Runner-Up, IEEE Biomedical Hackathon", "detail": "ML/DL track", "when": "Oct 2025" },
-    { "title": "Gold Medalist for academic excellence", "detail": "Delhi Public School, Vasant Kunj", "when": "" },
-    { "title": "500+ problems solved on LeetCode", "detail": "", "when": "" }
+    {
+      "title": "Winner, IEEEXtreme Hackathon",
+      "detail": "1st place",
+      "when": "2026",
+      "where": "IEEEXtreme (global, online)",
+      "description": "Won IEEEXtreme, IEEE's 24-hour worldwide team programming competition."
+    },
+    {
+      "title": "Runner-Up, Abhyaas Edu Ltd Case Competition",
+      "detail": "",
+      "when": "Jan 2026",
+      "where": "",
+      "description": ""
+    },
+    {
+      "title": "2nd Runner-Up, IEEE Biomedical Hackathon",
+      "detail": "ML/DL track",
+      "when": "Oct 2025",
+      "where": "",
+      "description": ""
+    },
+    {
+      "title": "Gold Medalist for academic excellence",
+      "detail": "",
+      "when": "",
+      "where": "Delhi Public School, Vasant Kunj",
+      "description": ""
+    },
+    {
+      "title": "500+ problems solved on LeetCode",
+      "detail": "",
+      "when": "",
+      "where": "LeetCode",
+      "description": ""
+    }
   ],
-
   "education": [
     {
       "school": "National Institute of Technology, Warangal",

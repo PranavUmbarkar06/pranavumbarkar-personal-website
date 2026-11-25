@@ -152,10 +152,13 @@ export function loadTreks(): JourneyContent {
   });
 
   milestones.push({ ...FINISH, lift: Math.max(0, prevLift - 20) });
+  const totalKm = treks.reduce((s, t) => s + (t.data.distance_km ?? 0), 0);
 
   return {
     slug: "treks",
     title: "TREKS",
+    theme: "mountains",
+    clear: `${treks.length} summits · ${fmt(totalKm)} km on foot · 0 regrets`,
     intro: `${treks.length} climbs, oldest first. Scroll to drive.`,
     milestones,
   };

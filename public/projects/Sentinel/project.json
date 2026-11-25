@@ -1,0 +1,17 @@
+{
+  "name": "Sentinel",
+  "when": "2026-09",
+  
+  "where": "CCPD - co - innovation day",
+  "status": "participant",
+  "role": "dashboard + strategy",
+  "highlight": "made an app from scratch in 40 mins along with a presentation and free pizza",
+  "brief": "college mental health dashboard with analyses patterns in students for distress",
+  "story": "someone in close proximity of my life suffered through a mental breakdown... this is an execution of how i would prevent something like that",
+  "learned": "signs arent always obvious, nothing can replace human connection",
+  "tech": ["next.js", "python", "machine learning", "tailwind css"],
+  "collaborators": [],
+  "github": "https://github.com",
+  "demo": "",
+  "metric": { "label": "claude tokens used", "value": "500M" }
+}

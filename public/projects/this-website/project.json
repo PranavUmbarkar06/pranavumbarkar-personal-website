@@ -1,0 +1,16 @@
+{
+  "name": "This website",
+  "when": "2026-11",
+  "end": "ongoing",
+  "where": "Right here",
+  "status": "In progress",
+  "role": "Designer, developer, jeep driver",
+  "highlight": "You're driving through it right now.",
+  "brief": "My personal site as a little driving game: pick a world, scroll, and the jeep drives you through my life.",
+  "story": "I didn't want a boring portfolio. So every part of my life got its own map, from trekking trails to this neon city.",
+  "learned": "Scroll-driven animation is 10% maths and 90% tweaking numbers.",
+  "tech": ["Next.js", "TypeScript", "Tailwind CSS", "SVG", "Vercel"],
+  "collaborators": [],
+  "github": "https://github.com/your-username/personal-website",
+  "demo": ""
+}

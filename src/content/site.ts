@@ -10,7 +10,7 @@
      Leave it as "" to keep the drawn cartoon scene.
 */
 
-export type SceneKind = "mountains" | "workshop" | "music" | "city" | "paper";
+export type SceneKind = "mountains" | "workshop" | "neon" | "music" | "city" | "paper";
 
 export interface World {
   id: string;
@@ -59,24 +59,24 @@ export const worlds: World[] = [
   },
   {
     id: "projects",
-    locked: true,
+    locked: false,
     title: "PROJECTS",
     subtitle: "Things I built (and broke)",
-    stat: "8 builds",
-    scene: "workshop",
-    sky: ["#ffb347", "#ffe3a8"],
-    hill: "#c97a2b",
+    stat: "6 builds",
+    scene: "neon",
+    sky: ["#5a1d8a", "#ff8a6b"],
+    hill: "#3b2160",
     image: "",
   },
   {
     id: "music",
-    locked: true,
+    locked: false,
     title: "MUSIC",
-    subtitle: "Songs, jams & playlists",
-    stat: "24 tracks",
+    subtitle: "Live gigs, bands & jams",
+    stat: "5 gigs",
     scene: "music",
-    sky: ["#7b5cff", "#e0b8ff"],
-    hill: "#3c2a8f",
+    sky: ["#050a1a", "#1d3f99"],
+    hill: "#03050c",
     image: "",
   },
   {

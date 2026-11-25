@@ -1,0 +1,22 @@
+{
+  "name": "What the gig was",
+  "when": "2026-01-15",
+  "venue": "Full venue name, City",
+  "where": "Short place",
+  "band": "Band name (leave out for a solo set)",
+  "instruments": ["Lead guitar", "Backing vocals"],
+  "members": [
+    "Bandmate Name",
+    { "name": "Bandmate With A Link", "url": "https://instagram.com/their-username" }
+  ],
+  "setlist": ["Song one", "Song two", "Song three"],
+  "highlight": "One punchy line (shown big)",
+  "brief": "One or two sentences: what the night was.",
+  "story": "The longer story: the build-up, what went wrong, the moment it clicked.",
+  "feeling": "A backstage thought.",
+  "crowd": "200",
+  "clips": [
+    { "file": "solo.mp3", "title": "The solo, phone recording" },
+    { "url": "https://www.youtube.com/watch?v=VIDEO_ID", "title": "Full set on YouTube" }
+  ]
+}

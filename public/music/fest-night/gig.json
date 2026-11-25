@@ -1,0 +1,15 @@
+{
+  "name": "Fest night headliner",
+  "when": "2025-10-18",
+  "venue": "Open-air main stage, college fest",
+  "where": "Main stage",
+  "band": "Fuzz & Fables",
+  "instruments": ["Lead guitar", "Keys"],
+  "members": ["Kabir Singh", "Meera Joshi", "Rohan Pillai", "Tara Fernandes"],
+  "setlist": ["Last Light (original)", "Neon Rain", "Velvet Thunder", "Paper Planes at Noon", "Static Bloom (original)", "Encore Road"],
+  "highlight": "Closing night. 1,500 phone torches.",
+  "brief": "Our first headline slot: a 40-minute set under real stage lights.",
+  "story": "We opened with the slowest song on purpose and let the crowd come to us. By the encore the whole field was singing a chorus we wrote in a hostel room.",
+  "feeling": "The loudest moment of the night was the silence right before the last chord.",
+  "crowd": "1.5k"
+}

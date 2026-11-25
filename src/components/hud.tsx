@@ -34,7 +34,7 @@ export function useSound() {
 
 export function MuteButton({ muted, onToggle, small = false }: { muted: boolean; onToggle: () => void; small?: boolean }) {
   return (
-    <button className={`hud-btn shrink-0 bg-[#3d4651] ${small ? "hud-btn-sm size-[42px]" : "size-11 sm:size-[54px]"}`} onClick={onToggle} aria-pressed={muted}
+    <button className={`hud-btn shrink-0 bg-[#3d4651] ${small ? "hud-btn-sm size-[46px]" : "size-11 sm:size-[54px]"}`} onClick={onToggle} aria-pressed={muted}
       aria-label={muted ? "Turn sound on" : "Mute sound"} title={muted ? "Sound off" : "Sound on"}>
       <SpeakerIcon muted={muted} />
     </button>
@@ -84,7 +84,7 @@ export function StageSwitcher({ current }: { current: string }) {
             ),
           )}
           <Link href="/" role="menuitem" className="stage-item mt-1 border-t-2 border-black/40 pt-2" onClick={() => sfx.click()}>
-            <span className="outline-text">◀ MAIN MENU</span>
+            <span className="menu-back" aria-hidden /><span className="outline-text">MAIN MENU</span>
           </Link>
         </div>
       )}

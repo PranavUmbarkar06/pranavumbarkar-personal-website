@@ -1,0 +1,17 @@
+{
+  "name": "Self-learning PacMan",
+  "when": "2026-03",
+  
+  "where": "course-turned-hobby project",
+  "status": "Shipped",
+  "role": "Everything",
+  "highlight": "training Deep RL takes a ridiculuously long time",
+  "brief": "a pacman learns on its own to eat pellets and run from ghost",
+  "story": "wanted to explore games and reinforcement learning along with 20 marks for internal evaluation",
+  "learned": "rewards are one p.i.t.a",
+  "tech": ["pygame", "numpy"],
+ 
+  "github": "https://github.com/PranavUmbarkar06/PacMan",
+  "demo": "",
+  "metric": { "label": "training epochs", "value": "2000+" }
+}

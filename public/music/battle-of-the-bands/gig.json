@@ -1,0 +1,16 @@
+{
+  "name": "Battle of the Bands",
+  "when": "2023-02-11",
+  "venue": "College auditorium, Pune",
+  "where": "Auditorium",
+  "band": "Fuzz & Fables",
+  "instruments": ["Lead guitar"],
+  "members": ["Kabir Singh", { "name": "Meera Joshi", "url": "" }, "Rohan Pillai"],
+  "setlist": ["Static Bloom (original)", "Neon Rain", "Nine Lives Blues", "Last Light (original)"],
+  "highlight": "Second place, one snapped string.",
+  "brief": "Twelve bands, eight minutes each, and a solo I had practised 400 times.",
+  "story": "The high E snapped in the middle of the third song. Kabir stretched the drum break for a full minute while I swapped guitars with the band waiting in the wings. The judges said the save was their favourite part.",
+  "feeling": "Always tune the spare guitar too.",
+  "crowd": "600",
+  "clips": [{ "file": "solo-take.wav", "title": "Solo rehearsal take (placeholder audio)" }]
+}

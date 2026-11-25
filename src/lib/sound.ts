@@ -83,6 +83,11 @@ export const sfx = {
   start() { [523, 659, 784, 1047].forEach((f, i) => tone(f, i * 0.08, 0.14)); },
   locked() { tone(196, 0, 0.12, "square", undefined, 0.6); tone(147, 0.12, 0.18, "square", undefined, 0.6); },
   ding() { tone(1319, 0, 0.25, "triangle", undefined, 0.6); tone(1760, 0.08, 0.3, "triangle", undefined, 0.5); },
+  /** Music world checkpoint: a soft arpeggio that walks a chord progression (I, vi, IV, V...). */
+  strum(step = 0) {
+    const chords = [[220, 277.2, 329.6, 440], [185, 220, 277.2, 370], [146.8, 220, 293.7, 370], [164.8, 207.7, 246.9, 329.6]];
+    chords[((step % 4) + 4) % 4].forEach((f, i) => tone(f * 2, i * 0.06, 0.6, "triangle", undefined, 0.45));
+  },
   rev() { tone(70, 0, 0.6, "sawtooth", 220, 0.7); },
   /** Silence the engine hum (used on story pages). */
   engineOff() {

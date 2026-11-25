@@ -117,18 +117,22 @@ export default function StageSelect() {
     go(v > 0 ? 1 : -1);
   };
 
-  const shift = cardW * 0.78;
+  // wide screens: push side cards out far enough that the arrows sit in a clear gap
+  const shift = cardW * (cardW >= 340 ? 0.95 : 0.8);
 
   return (
     <div className="relative h-dvh overflow-hidden select-none">
       {/* ---------- background ---------- */}
       <div className="stage-bg fixed inset-0 -z-0 overflow-hidden" aria-hidden>
+        <div className="stage-halo" />
         <div className="spot spot-l" />
         <div className="spot spot-r" />
+        <div className="atmo-motes" />
         <svg className="absolute bottom-0 left-0 h-[38vh] w-full" viewBox="0 0 1200 300" preserveAspectRatio="none">
           <path d="M0 180 Q150 90 300 160 T600 140 T900 170 T1200 120 V300 H0Z" fill="#1d2733" />
           <path d="M0 230 Q200 170 400 220 T800 210 T1200 200 V300 H0Z" fill="#141b24" />
         </svg>
+        <div className="atmo-mist" />
       </div>
 
       {/* ---------- HUD ---------- */}
@@ -137,7 +141,7 @@ export default function StageSelect() {
           <Counter icon="coin" value={player.coins} />
           <Counter icon="gem" value={player.gems} />
         </div>
-        <div className="flex items-start gap-3 sm:gap-4">
+        <div className="flex items-center gap-3 sm:gap-4">
           <a className="hud-btn size-11 shrink-0 bg-[#1db954] sm:size-[54px]" href={links.spotify} target="_blank" rel="noopener noreferrer"
             aria-label="My favourite songs on Spotify" title="My favourite songs on Spotify">
             <SpotifyIcon />
@@ -154,11 +158,12 @@ export default function StageSelect() {
 
       {/* ---------- stage select ---------- */}
       <main className="relative z-[2] flex h-full flex-col items-center justify-center pt-10 pb-[150px] sm:pb-[130px] short:pb-[100px]">
-        <h1 className="outline-text mb-2.5 text-[clamp(30px,5vw,52px)] tracking-wide">{world.title}</h1>
+        <h1 className="outline-text mb-4 text-[clamp(36px,5.5vw,64px)] leading-none tracking-wide">{world.title}</h1>
 
         <div
           className={`relative h-[clamp(190px,38vw,340px)] w-full touch-pan-y outline-none ${drag !== null ? "cursor-grabbing" : "cursor-grab"}`}
           tabIndex={0}
+          style={{ "--cw": `${cardW}px` } as React.CSSProperties}
           aria-label="World select. Use left and right arrows."
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
@@ -192,7 +197,7 @@ export default function StageSelect() {
                     <span className="outline-text text-[clamp(18px,3vw,30px)]">COMING SOON</span>
                   </div>
                 )}
-                <span className="outline-text absolute right-2.5 bottom-2.5 rounded-xl border-[3px] border-ink bg-black/55 px-2.5 py-0.5 text-base">
+                <span className="card-stat outline-text absolute right-2.5 bottom-2.5 rounded-xl border-[3px] border-ink bg-black/55 px-2.5 py-0.5 text-base">
                   {w.stat}
                 </span>
               </div>
@@ -202,21 +207,21 @@ export default function StageSelect() {
           <button className="arrow arrow-next" aria-label="Next world" onClick={() => go(1)} />
         </div>
 
-        <p className="outline-text mt-3.5 mb-1.5 text-[clamp(15px,2vw,20px)] text-[#e8eef5] short:hidden">{world.subtitle}</p>
+        <p className="outline-text mt-5 mb-2.5 text-[clamp(15px,2vw,20px)] text-[#e8eef5] short:hidden">{world.subtitle}</p>
         <div className="flex gap-2 short:hidden">
           {worlds.map((w, i) => (
             <button
               key={w.id}
               aria-label={w.title}
               onClick={() => pick(i)}
-              className={`h-3 w-3 rounded-full border-2 border-ink transition ${i === cur ? "scale-125 bg-gold" : "bg-[#4a5562]"}`}
+              className={`dot-btn h-3 w-3 rounded-full border-2 border-ink transition-[transform,background-color] duration-200 ${i === cur ? "scale-125 bg-gold" : "bg-[#4a5562]"}`}
             />
           ))}
         </div>
       </main>
 
       {/* ---------- bottom buttons ---------- */}
-      <nav className="fixed inset-x-0 bottom-[max(18px,env(safe-area-inset-bottom))] z-10 flex items-center justify-center gap-3 px-4 sm:gap-5">
+      <nav className="fixed inset-x-0 bottom-[max(18px,env(safe-area-inset-bottom))] z-10 flex items-stretch justify-center gap-3 px-4 sm:gap-5">
         <Link href="/recruiters" className="chunky-btn btn-steel btn-recruiter" onClick={() => sfx.click()}>
           <span className="inline-block h-6 w-6 shrink-0 sm:h-7 sm:w-7"><BriefcaseIcon /></span>
           <span className="outline-text leading-none">FOR<br className="sm:hidden" /> RECRUITERS</span>
@@ -261,7 +266,7 @@ export default function StageSelect() {
 
 function Counter({ icon, value }: { icon: "coin" | "gem"; value: number }) {
   return (
-    <div className="flex items-center gap-2 rounded-[20px] border-[3px] border-ink bg-black/35 py-0.5 pr-3.5 pl-1 text-lg sm:text-[22px]">
+    <div className="flex min-w-[104px] items-center gap-2 rounded-[20px] border-[3px] border-ink bg-black/35 py-0.5 pr-3.5 pl-1 text-lg tabular-nums sm:min-w-[118px] sm:text-[22px]">
       <span className={`ico ico-${icon}`} />
       <span className="outline-text">{value.toLocaleString("en-US")}</span>
     </div>

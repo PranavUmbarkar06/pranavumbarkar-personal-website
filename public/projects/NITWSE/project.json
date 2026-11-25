@@ -1,0 +1,21 @@
+{
+  "name": "NITW Stock Exchange",
+  "when": "2025-05",
+  
+  "where": "NITW",
+  "status": "Prototyped with 30 users",
+  "role": "price control logic and marketting",
+  "highlight": "ruffled a few wrong feathers",
+  "brief": "converting college clubs into companies in which members can invest into using a fake currency",
+  "story": "i wanted my first ever project to be something super different and innovative. cooked up this",
+  "learned": "how stock markets actually work. how money actually works",
+  "tech": ["React", "Tailwind","Python"],
+  "collaborators": [
+    "Srihan Yadalla",
+    "Roy Harwani"
+    
+  ],
+  "github": "https://github.com/PranavUmbarkar06/nitwse-updated",
+  "demo": "",
+  "metric": { "label": "people angered", "value": "2" }
+}

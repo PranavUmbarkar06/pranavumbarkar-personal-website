@@ -1,0 +1,21 @@
+{
+  "name": "Decay-Aware Route Planning",
+  "when": "2026-10",
+  "where": "Impact Tank'26",
+  "status": "Prototype",
+  "role": "Architecture + Developement",
+  "highlight": "first ever team 3am build session",
+  "brief": "An algorithm that reroutes perishables according to their usability and optimise profit and loss",
+  "story": "got an idea at my fractal course in 5th semester of college. finally implemented it and it actually worked",
+  "learned": "know what you have ",
+  "tech": ["Next.js", "NetworkX", "fastAPI"],
+  "collaborators": [
+    { "name": "Ananya Reddy", "url": "https://github.com" },
+    "Shrot Parekh",
+    "Haamiz Suhail",
+    "Saahiti"
+  ],
+  "github": "https://github.com/PranavUmbarkar06/decay-aware-route-planning-mvp",
+  "demo": "",
+  "metric": { "label": "Hours slept", "value": "1.5" }
+}

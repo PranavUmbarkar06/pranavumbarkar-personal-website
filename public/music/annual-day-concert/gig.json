@@ -1,0 +1,13 @@
+{
+  "name": "Annual Day concert",
+  "when": "2021-12-20",
+  "venue": "School main hall",
+  "where": "School hall",
+  "band": "The Quarter Rests",
+  "instruments": ["Rhythm guitar"],
+  "members": ["Aarav Mehta", "Ishaan Rao", "Nisha Kulkarni"],
+  "setlist": ["Paper Planes at Noon", "Blue Hour"],
+  "brief": "First time with a full band, a real drum kit and a sound check that took longer than the set.",
+  "story": "We rehearsed in Ishaan's garage for six weeks. On the day the amp hummed like a fridge, so we turned everything down and played closer together. Best accident ever.",
+  "crowd": "400"
+}

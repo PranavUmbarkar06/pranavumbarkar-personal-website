@@ -1,0 +1,20 @@
+{
+  "name": "Project name",
+  "when": "2026-01",
+  "end": "2026-03",
+  "where": "Short place (fits ~15 letters)",
+  "status": "Shipped",
+  "role": "What you did on it",
+  "highlight": "One punchy line (shown big)",
+  "brief": "One or two sentences: what it is and who it's for.",
+  "story": "The longer story: why you built it, what went wrong, what you're proud of.",
+  "learned": "One thing you learned building it.",
+  "tech": ["React", "Python"],
+  "collaborators": [
+    "Friend Name",
+    { "name": "Friend With A Link", "url": "https://github.com/their-username" }
+  ],
+  "github": "https://github.com/your-username/repo",
+  "demo": "",
+  "metric": { "label": "Users", "value": "100+" }
+}
